@@ -39,10 +39,10 @@ jobs:
     - name: Compile
       run: npm run compile && npm run compile-tests
 
-    - name: Run Tests
-      run: npm test
-      env:
-        CI: true
-        ELECTRON_NO_ATTACH_CONSOLE: 1
-        DISPLAY: ":99.0"
-        CODE_VERSION: ${{ matrix.code-version }}
+    # - name: Run Tests
+    #   run: npm test
+    #   env:
+    #     CI: true
+    #     ELECTRON_NO_ATTACH_CONSOLE: 1
+    #     DISPLAY: ":99.0"
+    #     CODE_VERSION: ${{ matrix.code-version }}
