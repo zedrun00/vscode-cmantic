@@ -139,7 +139,7 @@ export class Setter extends Accessor {
             if (baseName !== memberVariable.name || memberPrefix) {
                 this.parameterName = baseName;
             } else {
-                this.parameterName = baseName + '_';
+                this.parameterName = 'p_' + baseName;
             }
         }
         this.parameter = '';

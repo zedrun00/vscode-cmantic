@@ -111,8 +111,8 @@ export async function generateGetterSetterFor(
 
     const workspaceEdit = new vscode.WorkspaceEdit();
     await Promise.all([
-        addNewAccessorToWorkspaceEdit(new Getter(symbol), getterPosition, classDoc, workspaceEdit, matchingUri),
-        addNewAccessorToWorkspaceEdit(await Setter.create(symbol), setterPosition, classDoc, workspaceEdit, matchingUri, true)
+        addNewAccessorToWorkspaceEdit(await Setter.create(symbol), setterPosition, classDoc, workspaceEdit, matchingUri, true),
+        addNewAccessorToWorkspaceEdit(new Getter(symbol), getterPosition, classDoc, workspaceEdit, matchingUri)
     ]);
     return vscode.workspace.applyEdit(workspaceEdit);
 }
